@@ -1,0 +1,258 @@
+
+$ffs : "Cosi Azure Black Stencil";
+$ffss : 'Poppins', sans-serif;
+$ffd : 'Megrim', cursive;
+
+$clr-primary : #e4e68d;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+
+    font-family: $ffss;
+    user-select: none;
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    height: 3px;
+    background: $clr-primary;
+}
+::-webkit-scrollbar-thumb{
+    background: blue;
+}
+
+body{
+    overflow-x: hidden;
+    background: #070707;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+section{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.landingImgContainer{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    img{
+        width:100%;
+        filter: grayscale(1);
+        opacity: 0.4;
+        transition: all 0.5s ;
+    }
+}
+
+#landingLogo{
+    padding:0 5vw;
+    color: $clr-primary;
+    width: fit-content;
+    text-align: left;
+    position:absolute;
+    
+    font-size: 1.5em;
+    font-family: $ffd;
+
+    top:10%;
+    transform: translateY(-50%);
+
+    z-index: 1;
+
+    &:hover + .landingImgContainer > img{
+        filter:grayscale(0);
+        opacity: 0.8;
+    }
+    &:hover ~ .landingDesc{
+        mix-blend-mode: lighten;
+        background: #000;
+    }
+}
+
+.landingLinksContainer{
+    position: absolute;
+    top:80%;
+    transform: translateY(-50%);
+    width:100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    a{
+        color: white;
+        font-family: $ffd;
+        display: block;
+        width:fit-content;
+        height: fit-content;
+        padding:10px 5vw;
+        font-size: 2rem;
+        transition: padding 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        &:hover{
+            border-left:5px solid $clr-primary;
+            padding:10px 10vw;
+            color: $clr-primary;
+            
+        }
+    }
+}
+
+
+.landingDesc{
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: rgb(179, 179, 179);
+    font-size: 1.2rem;
+    width: fit-content;
+    span{
+        margin-top: 20px;
+        color: white;
+        display: inline-block;
+        font-family: $ffd;
+        font-weight: 800;
+        font-size: calc(2.8vw * 1.1);
+        background: rgb(223, 223, 223);
+        color: black;
+        padding:10px 30px;
+        border-radius: 3px;
+    }
+    .currentProjectTitle{
+        background: none;
+        font-family: $ffss;
+        // width:70vw;
+        font-size: 10vw;
+        color: #8c8c73;
+        transition: text-shadow 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: block;
+        &:hover{
+            color: black;
+            text-shadow: 
+                5px 5px 0 rgb(255, 0, 0),
+                -5px -5px 0 blue,
+                10px 10px 0 green;
+        }
+    }
+}
+
+.landingCTA{
+    position: absolute;
+    right:10%;
+    bottom:10%;
+    width:150px;
+    height: 150px;
+    border-radius:50% 50% 44% 56% / 58% 51% 49% 42% ;
+    font-size: 2.5rem;
+    border: none;
+    
+    background: $clr-primary;
+    color: darken($clr-primary,70%);
+    
+    transform: scale(0.8) rotate(-45deg);
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    &:hover{
+        transform: scale(1) rotate(0deg);
+        // border-radius:50%;
+    }
+}
+
+
+section:not(#landing){
+    padding:0 5vw;
+    padding-top:5%;
+}
+.sectionTitle{
+    color: $clr-primary;
+    font-family: $ffd;
+    font-size: 1.5em;
+}
+.musicContainer{
+    margin-top: 20px;
+    padding:50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    // gap: 50px;
+}
+
+.musicCard{
+    display: grid;
+    grid-template-rows: 10fr 1fr 1fr;
+    cursor: pointer;
+    flex:0 1 30%;
+    margin-top: 50px;
+
+    &:hover{
+        transform: scale(0.9);
+    }
+}
+.music-albumArt{
+    align-self: end;
+    margin-bottom: 20px;
+    img{
+        height: 80%;
+        width: 80%;
+    }
+}
+.music-title{
+    color: white;
+    font-size: 1.2rem;
+}
+.music-tags{
+    color: rgb(177, 177, 177);
+    font-size: 0.8rem;
+}
+
+footer{
+    background: rgb(20, 20, 20);
+    height: 30vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    #social{
+        display: grid;
+        grid-auto-flow: column;
+        width: 100%;
+        justify-content: space-between;
+        a{
+            color: white;
+            font-size: 2rem;
+            padding:5px;
+            margin: 0 20px;
+            transition: transform 0.15s;
+            &:hover{
+                transform: scale(1.5);
+            }
+
+            &:nth-child(1):hover{
+                color: rgb(29, 96, 221);
+            }
+            &:nth-child(2):hover{
+                color: rgb(29, 221, 125);
+            }
+            &:nth-child(3):hover{
+                color: rgb(154, 60, 209);
+            }
+            &:nth-child(4):hover{
+                color: rgb(221, 29, 29);
+            }
+            &:nth-child(5):hover{
+                color: rgb(221, 115, 29);
+            }
+        }
+    }
+}
+// #637972 #706379 #8c8c73
