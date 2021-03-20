@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tare Music</title>
+    <title>Taare Music</title>
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
@@ -15,56 +15,109 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" defer></script>
+    
+    <script src="js/emblem.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <div id="preLoader">
+        <div class="textWrapper">
+            <small>wtf. taare</small>
+        </div>
+    </div>
+    
+    <div class="emblem">Taare*Taare*</div>
+
+
     <section id="landing">
         <h1 id='landingLogo'>
-            Taare Music
+            Taare.
         </h1>
-        
-        <div class="landingImgContainer">
-            <img src="./images/tare2.jpg" alt="">
+
+            <img id='landingTaareImg' src="./images/tare1.jpg" alt="" loading='lazy'>
         </div>
 
-
-        <div class="landingLinksContainer">
-            <a href="#music" class="landingLink">Music</a>
-            <a href="#videos" class="landingLink">Videos</a>
-            <a href="#social" class="landingLink">Social</a>
-            <!-- <a href="#newsletter" class="landingLink">Newsletter</a> -->
+        <div class="landingSocialLinks">
+            <a class='lsLink' href=''>
+                <i class='fab fa-spotify' ></i>
+            </a>
+            <a class='lsLink' href=''>
+                <i class='fab fa-instagram'></i>
+            </a>
+            <a class='lsLink' href=''>
+                <i class='fab fa-youtube'></i>
+            </a>
         </div>
 
-
-        <p class='landingDesc'>
-            <span class='currentProjectTitle'>
-                Taare Meets
-            </span>
-            <br>
-            A collaboration project by<br><span>Swapnil Taare</span>    
-        </p>
-
-        <button class="landingCTA">
-            <i class="fas fa-arrow-right"></i>
-        </button>
+        <div class="mainWrapper">
+            <div class="landingLinksContainer">
+                <a href="#music" class="landingLink">Music</a>
+                <a href="#videos" class="landingLink">Videos</a>
+                <a href="#social" class="landingLink">Social</a>
+            </div>
+            
+            <div class="upcomingProjects">
+                <h3 id='upcomingReleases'>Upcoming Releases</h3>
+                <li class="ucpListItem">
+                    <div class="itemImg">
+                        <img src="./images/parindey.jpg" alt="Parindey Album Art">
+                    </div>
+                    <div class="itemDesc">
+                        <div class="trackName">Parindey</div>
+                        <div class='trackOthers'>
+                            <div class="artistName">SiDD</div>
+                            <div class="trackType">Collaboration</div>
+                        </div>
+                    </div>
+                    <!-- <div class="itemReleaseDate">
+                        March 28
+                    </div> -->
+                </li>
+                <li class="ucpListItem">
+                    <div class="itemImg">
+                        <img src="./images/unloose.jpg" alt="Parindey Album Art">
+                    </div>
+                    <div class="itemDesc">
+                        <div class="trackName">Unloose</div>
+                        <div class='trackOthers'>
+                            <div class="artistName">Rachit Shrivastava</div>
+                            <div class="trackType">EP</div>
+                        </div>
+                    </div>
+                    <!-- <div class="itemReleaseDate">
+                        March 28
+                    </div> -->
+                </li>
+            </div>
+        </div>
     </section>
+
+
+
+
+
+
+
+
+
 
     <section id="music">
         <h3 class='sectionTitle'>Music</h3>
         <div class="musicContainer">
             <div class="musicCard">
                 <div class="music-albumArt">
-                    <img src="./images/parindey.jpg" alt="">
+                    <img src="./images/amma.png" alt="">
                 </div>
-                <div class="music-title">Parindey</div>
+                <div class="music-title">Amma Puchdi</div>
                 <div class="music-tags">Collaboration</div>
             </div>
             <div class="musicCard">
                 <div class="music-albumArt">
-                    <img src="./images/unloose.jpg" alt="">
+                    <img src="./images/nindiya.png" alt="">
                 </div>
-                <div class="music-title">Unloose</div>
+                <div class="music-title">Nindiya Re</div>
                 <div class="music-tags">EP</div>
             </div>
         </div>
@@ -73,6 +126,15 @@
     <section id="videos">
         <h3 class='sectionTitle'>Videos</h3>
         
+        <div class="videosContainer">
+            
+                <iframe height="300px" src="https://www.youtube.com/embed/-0074GgTDsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            
+                <iframe height="300px" src="https://www.youtube.com/embed/Iyf_-HuJvho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+            
+        </div>
     </section>
 
     <footer>
