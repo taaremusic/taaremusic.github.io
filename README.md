@@ -1,3 +1,3 @@
 # taremusic
 
-Personal Website of Tare music 
+Personal Website of Tare music
