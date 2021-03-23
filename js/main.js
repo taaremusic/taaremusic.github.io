@@ -1,3 +1,5 @@
+var rellax = new Rellax('.rellax');
+
 gsap.registerPlugin(CSSRulePlugin);
 let preloaderRule = CSSRulePlugin.getRule("#preLoader::before");
 let imgRule = CSSRulePlugin.getRule(".imgWrapper::before");
