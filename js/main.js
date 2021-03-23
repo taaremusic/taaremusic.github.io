@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-let cpt = document.querySelector('.currentProjectTitle'); // currentProjectTitle -> cpt
-
-cpt.addEventListener('mousemove',(e)=>{
-    let {x,y} = e;
-
-    cpt.style.transform = `translateX(${x*0.1}px)`;
-})
-=======
 gsap.registerPlugin(CSSRulePlugin);
 let preloaderRule = CSSRulePlugin.getRule("#preLoader::before");
 let imgRule = CSSRulePlugin.getRule(".imgWrapper::before");
@@ -75,4 +66,3 @@ tl.to(preloaderRule,{
     duration:1,
     ease:'power4.inOut'
 },'-=1')
->>>>>>> funcode
